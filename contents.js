@@ -1,5 +1,3 @@
-// filter: blur(4px); user-select: none;
-
 function removeStyles() {
   const elements = document.querySelectorAll("*");
   elements.forEach((element) => {
