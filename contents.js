@@ -3,7 +3,10 @@ function removeStyles() {
   elements.forEach((element) => {
     const style = window.getComputedStyle(element);
     if (style.filter.includes("blur") || style.userSelect === "none") {
-      element.style.filter = "none";
+      element.style.filter = element.style.filter.replace(/blur\([^)]+\)/g, "");
+      if (element.style.filter.trim() === "") {
+        element.style.filter = "none";
+      }
       element.style.userSelect = "auto";
     }
   });

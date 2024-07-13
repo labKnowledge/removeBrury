@@ -1,0 +1,44 @@
+# Style Remover Chrome Extension
+
+## Description
+
+Style Remover is a Google Chrome extension that removes specific CSS styles from web pages. It targets and removes the following styles:
+
+- Any `blur` filter effect (e.g., `filter: blur(4px)`, `filter: blur(10px)`, etc.)
+- `user-select: none;`
+
+This extension is useful for improving readability and enabling text selection on websites that may have intentionally blurred content or disabled text selection.
+
+## Features
+
+- Automatically removes all blur effects from elements, regardless of blur intensity
+- Enables text selection on elements where it was disabled
+- Works on page load and continues to monitor for dynamically added content
+
+## Installation
+
+1. Clone this repository or download the source code.
+2. Open Google Chrome and navigate to `chrome://extensions`.
+3. Enable "Developer mode" in the top right corner.
+4. Click "Load unpacked" and select the directory containing the extension files.
+
+## Usage
+
+Once installed, the extension will automatically run on all web pages. No further action is required from the user.
+
+## Files
+
+- `manifest.json`: Configuration file for the Chrome extension
+- `content.js`: Contains the main logic for removing styles
+
+## Contributing
+
+Contributions to improve the extension are welcome. Please feel free to submit a pull request or open an issue to discuss potential changes/additions.
+
+## License
+
+[MIT License](LICENSE)
+
+## Disclaimer
+
+This extension modifies the appearance of web pages. Use it responsibly and be aware that it may interfere with the intended design or functionality of some websites.
